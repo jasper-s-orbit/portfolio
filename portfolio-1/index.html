@@ -197,7 +197,8 @@
         <div class="container">
             <h2>Get In Touch</h2>
             <p>Have a project in mind or want to discuss potential opportunities? Feel free to reach out!</p>
-            <form class="contact-form">
+            <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+                <input type="hidden" name="access_key" value="3a969ebd-5a29-44d3-bfa8-8bed8978fdf6">
                 <div class="form-group">
                     <label for="name">Name</label>
                     <input type="text" id="name" class="form-control" required>
@@ -213,6 +214,8 @@
                 <div class="form-group">
                     <label for="message">Message</label>
                     <textarea id="message" class="form-control" required></textarea>
+                    <!-- Honeypot Spam Protection -->
+                    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
                 </div>
                 <button type="submit" class="btn">Send Message</button>
             </form>
