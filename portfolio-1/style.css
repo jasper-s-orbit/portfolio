@@ -365,7 +365,7 @@
         
         .portfolio-image {
             width: 100%;
-            height: 250px;
+            height: 350px;
             object-fit: cover;
             display: block;
         }
@@ -423,6 +423,43 @@
             transform: translateY(-3px);
             color: var(--primary)
         }
+
+
+/* Scroll to Top Button Styling */
+    #scrollToTopBtn {
+        display: flex; /* Use flex to center icon */
+        justify-content: center;
+        align-items: center;
+        position: fixed; /* Fixed position relative to viewport */
+        bottom: 30px; /* 30px from the bottom */
+        right: 30px; /* 30px from the right */
+        z-index: 99; /* Ensure it's above most content, below overlay */
+        background: var(--secondary);
+        color: var(--black); /* Icon color */
+        width: 50px; /* Button width */
+        height: 50px; /* Button height */
+        border-radius: 50%; /* Make it circular */
+        border: none; /* Remove default button border */
+        outline: none; /* Remove outline on focus */
+        cursor: pointer;
+        font-size: 1.5rem; /* Icon size */
+        opacity: 0; /* Initially hidden */
+        visibility: hidden; /* Initially hidden */
+        transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out, transform 0.3s ease; /* Smooth fade and scale transition */
+        transform: scale(0.9); /* Slightly smaller when hidden */
+    }
+
+    #scrollToTopBtn.show {
+        opacity: 1; /* Visible when 'show' class is added */
+        visibility: visible; /* Visible when 'show' class is added */
+        transform: scale(1); /* Return to normal size when visible */
+    }
+
+    #scrollToTopBtn:hover {
+        background-color: var(--accent); /* Darker background on hover */
+        color: var(--primary); /* Icon color on hover */
+        transform: scale(1.15);
+    }
 
         /* Contact Details Section */
 .contact-details {
